@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
+    // for movement
     public float moveSpeed;
     float xInput, yInput;
 
@@ -16,6 +17,15 @@ public class Player : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
+        
+    }
+
+    private void FixedUpdate() {
+        // define the axes
+        xInput = Input.GetAxis("Horizontal");
+        yInput = Input.GetAxis("Vertical");
+
+        transform.Translate(xInput * moveSpeed, yInput * moveSpeed, 0);
         
     }
 
