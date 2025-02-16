@@ -8,6 +8,7 @@ TagManager:
   - Caterpiller
   - fakeCaterpillar
   - seed
+  - Door
   layers:
   - Default
   - TransparentFX

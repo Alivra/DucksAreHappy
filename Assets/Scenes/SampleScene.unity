@@ -286,12 +286,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1708687303}
     - target: {fileID: 6886277844987216244, guid: 32579ab32ca68499d9b45ac10db239a9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.18920211
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886277844987216244, guid: 32579ab32ca68499d9b45ac10db239a9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.19553654
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886277844987216244, guid: 32579ab32ca68499d9b45ac10db239a9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.11862202
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886277844987216244, guid: 32579ab32ca68499d9b45ac10db239a9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 73.3
       objectReference: {fileID: 0}
     - target: {fileID: 6886277844987216244, guid: 32579ab32ca68499d9b45ac10db239a9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.9
+      value: 1.9383
       objectReference: {fileID: 0}
     - target: {fileID: 6886277844987216244, guid: 32579ab32ca68499d9b45ac10db239a9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -330,6 +342,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32579ab32ca68499d9b45ac10db239a9, type: 3}
+--- !u!114 &170897467 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5785418555517047386, guid: 32579ab32ca68499d9b45ac10db239a9, type: 3}
+  m_PrefabInstance: {fileID: 57695629}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcf0badbb79ac4417952a68e57af40d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &229509617
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,7 +570,7 @@ GameObject:
   - component: {fileID: 340896426}
   m_Layer: 0
   m_Name: fakeCaterpiller
-  m_TagString: Untagged
+  m_TagString: fakeCaterpillar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -631,7 +654,7 @@ GameObject:
   - component: {fileID: 347335981}
   m_Layer: 0
   m_Name: caterpillar1
-  m_TagString: Untagged
+  m_TagString: Caterpiller
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -762,7 +785,7 @@ GameObject:
   - component: {fileID: 424410231}
   m_Layer: 0
   m_Name: Door
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1234,6 +1257,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2923860771162151367, guid: 054dc732f8b784bbcb46c4fad19f4dac, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 170897467}
+    - target: {fileID: 2923860771162151367, guid: 054dc732f8b784bbcb46c4fad19f4dac, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextLine
+      objectReference: {fileID: 0}
     - target: {fileID: 6425630682483305138, guid: 054dc732f8b784bbcb46c4fad19f4dac, type: 3}
       propertyPath: m_Name
       value: CanvasMcGraw
@@ -1682,7 +1713,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0c972ae5fa33942fc93acbb91891cdf1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1703,7 +1734,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 56.70999, y: 0.20999908, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.23986, y: 0.23986, z: 0.23986}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1740,18 +1771,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.09338951, y: 0.21791363}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 13.61, y: 21.607193}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 8.782614, y: 15.257757}
   m_EdgeRadius: 0
 --- !u!50 &1349301303
 Rigidbody2D:
@@ -1792,7 +1823,7 @@ GameObject:
   - component: {fileID: 1363199964}
   m_Layer: 0
   m_Name: caterpillar2
-  m_TagString: Untagged
+  m_TagString: Caterpiller
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1876,7 +1907,7 @@ GameObject:
   - component: {fileID: 1671486133}
   m_Layer: 0
   m_Name: Golden Seed
-  m_TagString: Untagged
+  m_TagString: seed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2112,7 +2143,7 @@ GameObject:
   - component: {fileID: 1734687868}
   m_Layer: 0
   m_Name: caterpillar3
-  m_TagString: Untagged
+  m_TagString: Caterpiller
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
