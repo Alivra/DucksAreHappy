@@ -138,5 +138,4 @@ public class Player : MonoBehaviour
             gameObject.GetComponent<SceneChanger>().LoadScene("Leave");
         }
     }
-
 }
