@@ -1182,11 +1182,114 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6891437299144613378, guid: a93f721d009874987825ab90026b5604, type: 3}
+      propertyPath: choice1
+      value: 
+      objectReference: {fileID: 2132267536}
+    - target: {fileID: 6891437299144613378, guid: a93f721d009874987825ab90026b5604, type: 3}
+      propertyPath: choice2
+      value: 
+      objectReference: {fileID: 2132267535}
+    - target: {fileID: 6891437299144613378, guid: a93f721d009874987825ab90026b5604, type: 3}
+      propertyPath: choice3
+      value: 
+      objectReference: {fileID: 2132267534}
+    - target: {fileID: 6891437299144613378, guid: a93f721d009874987825ab90026b5604, type: 3}
+      propertyPath: choice4
+      value: 
+      objectReference: {fileID: 2132267533}
+    - target: {fileID: 6891437299144613378, guid: a93f721d009874987825ab90026b5604, type: 3}
+      propertyPath: contButton
+      value: 
+      objectReference: {fileID: 2132267537}
+    - target: {fileID: 6891437299144613378, guid: a93f721d009874987825ab90026b5604, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 2132267538}
+    - target: {fileID: 6891437299144613378, guid: a93f721d009874987825ab90026b5604, type: 3}
+      propertyPath: dialoguePanel
+      value: 
+      objectReference: {fileID: 2132267539}
+    - target: {fileID: 6891437299144613378, guid: a93f721d009874987825ab90026b5604, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891437299144613378, guid: a93f721d009874987825ab90026b5604, type: 3}
+      propertyPath: dialogue.Array.data[0]
+      value: Well, hello there! I am Darwin. The premier duck scientist, psychologist,
+        and veterinarian. Have you heard of Natural Selection?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891437299144613378, guid: a93f721d009874987825ab90026b5604, type: 3}
+      propertyPath: dialogue.Array.data[1]
+      value: It's a very curious phenomena I am studying decided by Variation, Inheritance,
+        Selection, Time and Adaptation.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891437299144613378, guid: a93f721d009874987825ab90026b5604, type: 3}
+      propertyPath: dialogue.Array.data[2]
+      value: ... Anyways what are you here for?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891437299144613378, guid: a93f721d009874987825ab90026b5604, type: 3}
+      propertyPath: dialogue.Array.data[4]
+      value: Yes of course! Who wouldn't be enamored with a quest for science?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891437299144613378, guid: a93f721d009874987825ab90026b5604, type: 3}
+      propertyPath: dialogue.Array.data[5]
+      value: I'll tell you what if you can capture 3 different colored caterpillars
+        (from beyond the tree line) for my study of divergent evolution
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891437299144613378, guid: a93f721d009874987825ab90026b5604, type: 3}
+      propertyPath: dialogue.Array.data[6]
+      value: ...I will give you a medical exam.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891437299144613378, guid: a93f721d009874987825ab90026b5604, type: 3}
+      propertyPath: dialogue.Array.data[8]
+      value: I attended the prestigious Johns Quackins University located in Merry
+        Land.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891437299144613378, guid: a93f721d009874987825ab90026b5604, type: 3}
+      propertyPath: dialogue.Array.data[9]
+      value: You know back in the day, I was quite skilled in wrestling; They even
+        put me in the paper.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891437299144613378, guid: a93f721d009874987825ab90026b5604, type: 3}
+      propertyPath: dialogue.Array.data[10]
+      value: But my true passion is science!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891437299144613378, guid: a93f721d009874987825ab90026b5604, type: 3}
+      propertyPath: dialogue.Array.data[12]
+      value: Excellent, now let me examine your head. It seems you have damaged your
+        memory storing feather.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891437299144613378, guid: a93f721d009874987825ab90026b5604, type: 3}
+      propertyPath: dialogue.Array.data[13]
+      value: Amnesia symptoms of your damage is forgetting ones memories. Although
+        being around familiar sights may allow you retrieve you memory.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891437299144613378, guid: a93f721d009874987825ab90026b5604, type: 3}
+      propertyPath: dialogue.Array.data[15]
+      value: Did you get my caterpillers yet?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891437299144613378, guid: a93f721d009874987825ab90026b5604, type: 3}
+      propertyPath: dialogue.Array.data[17]
+      value: I am quite busy right now, If you are curious about science come back
+        later.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a93f721d009874987825ab90026b5604, type: 3}
+--- !u!114 &758155068 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6891437299144613378, guid: a93f721d009874987825ab90026b5604, type: 3}
+  m_PrefabInstance: {fileID: 758155067}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f049e7dfd28f4501b019c0a76fd7195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &758295519
 GameObject:
   m_ObjectHideFlags: 0
@@ -2107,7 +2210,7 @@ Transform:
   m_GameObject: {fileID: 1720771905}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.68, y: 2.45, z: -1.0709187}
+  m_LocalPosition: {x: -4, y: 4.6, z: -1.0709187}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -42342,6 +42445,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1794640032767337817, guid: 99949ac261fec446db68f829ce8c2af2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 758155068}
+    - target: {fileID: 1794640032767337817, guid: 99949ac261fec446db68f829ce8c2af2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: goToChoice4
+      objectReference: {fileID: 0}
     - target: {fileID: 2896632736729737066, guid: 99949ac261fec446db68f829ce8c2af2, type: 3}
       propertyPath: m_Name
       value: DarwinCanvas
@@ -42426,11 +42537,84 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6630304840213364964, guid: 99949ac261fec446db68f829ce8c2af2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 758155068}
+    - target: {fileID: 6630304840213364964, guid: 99949ac261fec446db68f829ce8c2af2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: goToChoice3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085248736919529051, guid: 99949ac261fec446db68f829ce8c2af2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 758155068}
+    - target: {fileID: 7085248736919529051, guid: 99949ac261fec446db68f829ce8c2af2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextLine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661932339359483846, guid: 99949ac261fec446db68f829ce8c2af2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 758155068}
+    - target: {fileID: 8661932339359483846, guid: 99949ac261fec446db68f829ce8c2af2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: goToChoice2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8971261814912554468, guid: 99949ac261fec446db68f829ce8c2af2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 758155068}
+    - target: {fileID: 8971261814912554468, guid: 99949ac261fec446db68f829ce8c2af2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: goToChoice1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99949ac261fec446db68f829ce8c2af2, type: 3}
+--- !u!1 &2132267533 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8490643601078176548, guid: 99949ac261fec446db68f829ce8c2af2, type: 3}
+  m_PrefabInstance: {fileID: 2132267532}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2132267534 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3315826009769080957, guid: 99949ac261fec446db68f829ce8c2af2, type: 3}
+  m_PrefabInstance: {fileID: 2132267532}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2132267535 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3525494290816359591, guid: 99949ac261fec446db68f829ce8c2af2, type: 3}
+  m_PrefabInstance: {fileID: 2132267532}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2132267536 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6479349232385865903, guid: 99949ac261fec446db68f829ce8c2af2, type: 3}
+  m_PrefabInstance: {fileID: 2132267532}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2132267537 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5304274691478494402, guid: 99949ac261fec446db68f829ce8c2af2, type: 3}
+  m_PrefabInstance: {fileID: 2132267532}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2132267538 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3278052049703188427, guid: 99949ac261fec446db68f829ce8c2af2, type: 3}
+  m_PrefabInstance: {fileID: 2132267532}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &2132267539 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3917904360832093387, guid: 99949ac261fec446db68f829ce8c2af2, type: 3}
+  m_PrefabInstance: {fileID: 2132267532}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
