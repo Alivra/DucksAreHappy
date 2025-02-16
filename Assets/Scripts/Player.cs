@@ -102,17 +102,17 @@ public class Player : MonoBehaviour
         close.gameObject.SetActive(false);
         
         double score = luck * morality;
-        if (score <30)  
+        if (score <25)  
         {
             //shredded (inclusive)
             gameObject.GetComponent<SceneChanger>().LoadScene("shredI");
         }
-        else if (score >= 30 && score < 50)
+        else if (score >= 25 && score < 45)
         {
             //walk away
             gameObject.GetComponent<SceneChanger>().LoadScene("Leave");
         }
-        else if (score >= 50)
+        else if (score >= 45)
         {
             //eat poacher
             gameObject.GetComponent<SceneChanger>().LoadScene("Eat");
@@ -123,14 +123,17 @@ public class Player : MonoBehaviour
     {
         open.gameObject.SetActive(false);
         close.gameObject.SetActive(false);
-
+        
+        Debug.Log("Open");
+        
         double score = luck * morality;
-        if (score <30)
+        if (score <25)
         {
             //shredded (exclusive)
             gameObject.GetComponent<SceneChanger>().LoadScene("shredE");
         }
         else {
+            Debug.Log("Entered if else");
             //walk away
             gameObject.GetComponent<SceneChanger>().LoadScene("Leave");
         }
