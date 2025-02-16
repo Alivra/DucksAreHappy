@@ -28,5 +28,4 @@ public class Player : MonoBehaviour {
         transform.Translate(xInput * moveSpeed, yInput * moveSpeed, 0);
         
     }
-
 }
