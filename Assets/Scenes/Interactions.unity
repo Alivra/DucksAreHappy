@@ -627,8 +627,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: Yes of course! Who wouldn't be enamored with a quest for science. I'll
-    Tell you what if you can capture 3 different colored caterpillars for my study
-    of divergent evolution, I will give you a medical exam.
+    Tell you what if you can capture 3 different colored caterpillars (from beyond
+    the Tree line) for my study of divergent evolution, I will give you a medical
+    exam.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
