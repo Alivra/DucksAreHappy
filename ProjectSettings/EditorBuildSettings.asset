@@ -14,4 +14,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Eat.unity
+    guid: d187325f75b054c5f8b5f6fdfee6aafd
+  - enabled: 1
+    path: Assets/Scenes/Leave.unity
+    guid: 05740ad05dfa1455597a75f125eddb8e
+  - enabled: 1
+    path: Assets/Scenes/shredE.unity
+    guid: 676d02961188f44eabb7b7f3258fe8a5
+  - enabled: 1
+    path: Assets/Scenes/shredI.unity
+    guid: 98e0937257a4045be96f811f4b546594
+  - enabled: 1
+    path: Assets/Scenes/Psyduck-Vision.unity
+    guid: 23bafc5ab3b3e458b9ca27129a5573b3
   m_configObjects: {}
