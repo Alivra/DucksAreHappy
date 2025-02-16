@@ -15,6 +15,7 @@ public class NPC : MonoBehaviour
     public bool playerIsClose;
 
     private bool finishedConversation;
+    public GameObject choice1;
 
     void Start()
     {
@@ -43,7 +44,13 @@ public class NPC : MonoBehaviour
 
         if (dialogueText.text == dialogue[index])
         {
-            contButton.SetActive(true);
+            if (index == 1)
+            {
+                choice1.SetActive(true);
+            } else
+            {
+                contButton.SetActive(true);
+            }
         }
     }
 
@@ -65,9 +72,10 @@ public class NPC : MonoBehaviour
 
     public void NextLine()
     {
+        choice1.SetActive(false);
         contButton.SetActive(false);
 
-        if(index < dialogue.Length - 3)
+        if (index < dialogue.Length - 3)
         {
             index++;
             dialogueText.text = "";
