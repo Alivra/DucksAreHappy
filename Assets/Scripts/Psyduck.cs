@@ -5,15 +5,15 @@ using UnityEngine.UI;
 
 public class Psyduck : MonoBehaviour
 {
-     public TextPrinter PsyduckIntro;
+    public TextPrinter PsyduckIntro;
 
-     public TextPrinter Quest;
-     public TextPrinter GoAway;
+    public TextPrinter Quest;
+    public TextPrinter GoAway;
 
-     public Button C1;//battle
-     public Button C2;//leave
+    public Button C1;//battle
+    public Button C2;//leave
 
-     bool inRange = false;
+    bool inRange = false;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +21,7 @@ public class Psyduck : MonoBehaviour
         PsyduckIntro.gameObject.SetActive(false);
         Quest.gameObject.SetActive(false);
         GoAway.gameObject.SetActive(false);
-        
+
         C1.gameObject.SetActive(false);
         C2.gameObject.SetActive(false);
 
@@ -38,7 +38,11 @@ public class Psyduck : MonoBehaviour
             SetTextPrinterVisible(PsyduckIntro);
             Quest.gameObject.SetActive(true);
             SetTextPrinterVisible(Quest);
-            C1.gameObject.SetActive(true);
+            Pokemon check = gameObject.GetComponent<Pokemon>();
+            if (check.HasWon == false)
+            {
+                C1.gameObject.SetActive(true);
+            }
             C2.gameObject.SetActive(true);
         }
         // Connect to playerstats and if has 3 catapillers or fakes
@@ -54,7 +58,7 @@ public class Psyduck : MonoBehaviour
             inRange = true;
         }
     }
-    
+
     void OnCollisionExit2D(Collision2D collision)
     {
         Debug.Log("exit");
@@ -73,7 +77,8 @@ public class Psyduck : MonoBehaviour
         C1.gameObject.SetActive(false);
         C2.gameObject.SetActive(false);
         Pokemon connection = gameObject.GetComponent<Pokemon>();
-        connection.PlayPokemon = true;    }
+        connection.PlayPokemon = true;
+    }
 
     void OnC2Pressed()
     {
@@ -83,35 +88,35 @@ public class Psyduck : MonoBehaviour
     }
 
     void SetTextPrinterVisible(TextPrinter textPrinter)
-{
-    CanvasGroup canvasGroup = GetOrAddCanvasGroup(textPrinter);
-    canvasGroup.alpha = 1;  // Fully visible
-    canvasGroup.blocksRaycasts = true; // Ensure it can interact with UI
-}
-
-void SetTextPrinterInvisible(TextPrinter textPrinter)
-{
-    CanvasGroup canvasGroup = GetOrAddCanvasGroup(textPrinter);
-    canvasGroup.alpha = 0;  // Fully invisible
-    canvasGroup.blocksRaycasts = false; // Prevents interaction
-}
-
-void HideAllTextPrinters()
-{
-    foreach (TextPrinter textPrinter in new[] { PsyduckIntro, Quest, GoAway })
     {
-        SetTextPrinterInvisible(textPrinter);
+        CanvasGroup canvasGroup = GetOrAddCanvasGroup(textPrinter);
+        canvasGroup.alpha = 1;  // Fully visible
+        canvasGroup.blocksRaycasts = true; // Ensure it can interact with UI
     }
-}
 
-CanvasGroup GetOrAddCanvasGroup(TextPrinter textPrinter)
-{
-    CanvasGroup canvasGroup = textPrinter.GetComponent<CanvasGroup>();
-    if (canvasGroup == null)
+    void SetTextPrinterInvisible(TextPrinter textPrinter)
     {
-        canvasGroup = textPrinter.gameObject.AddComponent<CanvasGroup>();
+        CanvasGroup canvasGroup = GetOrAddCanvasGroup(textPrinter);
+        canvasGroup.alpha = 0;  // Fully invisible
+        canvasGroup.blocksRaycasts = false; // Prevents interaction
     }
-    return canvasGroup;
-}
+
+    void HideAllTextPrinters()
+    {
+        foreach (TextPrinter textPrinter in new[] { PsyduckIntro, Quest, GoAway })
+        {
+            SetTextPrinterInvisible(textPrinter);
+        }
+    }
+
+    CanvasGroup GetOrAddCanvasGroup(TextPrinter textPrinter)
+    {
+        CanvasGroup canvasGroup = textPrinter.GetComponent<CanvasGroup>();
+        if (canvasGroup == null)
+        {
+            canvasGroup = textPrinter.gameObject.AddComponent<CanvasGroup>();
+        }
+        return canvasGroup;
+    }
 
 }

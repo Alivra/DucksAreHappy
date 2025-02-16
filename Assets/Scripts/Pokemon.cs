@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Pokemon : MonoBehaviour
 {
     public bool PlayPokemon = false;
+    public bool HasWon = false;
     public int playerHealth = 50;
     public int PsyduckHealth = 50;
 
@@ -44,12 +45,13 @@ public class Pokemon : MonoBehaviour
         }
         if (PsyduckHealth <= 0)
         {
-            //enter cutscene
+            HasWon = true;
             PlayerHealthText.gameObject.SetActive(false);
             PsyduckHealthText.gameObject.SetActive(false);
             TackleButton.gameObject.SetActive(false);
             ThunderboltButton.gameObject.SetActive(false);
             BattleNarration.gameObject.SetActive(false);
+            //enter cutsceen
         }
 
         PlayerHealthText.text = "PlayerHealth: " + playerHealth;
