@@ -3,39 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class talk : MonoBehaviour
+public class Psyduck : MonoBehaviour
 {
-     public TextPrinter DarwinIntro;
+     public TextPrinter PsyduckIntro;
+
      public TextPrinter Quest;
-     public TextPrinter Credentials;
-     public TextPrinter AmnesiaInfo;
      public TextPrinter GoAway;
 
-     public Button C1;
-     public Button C2;
-     public Button C3;
-     public Button C4;
+     public Button C1;//battle
+     public Button C2;//leave
 
      bool inRange = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        DarwinIntro.gameObject.SetActive(false);
+        PsyduckIntro.gameObject.SetActive(false);
         Quest.gameObject.SetActive(false);
-        Credentials.gameObject.SetActive(false);
-        AmnesiaInfo.gameObject.SetActive(false);
         GoAway.gameObject.SetActive(false);
         
         C1.gameObject.SetActive(false);
         C2.gameObject.SetActive(false);
-        C3.gameObject.SetActive(false);
-        C4.gameObject.SetActive(false);
 
         C1.onClick.AddListener(OnC1Pressed);
         C2.onClick.AddListener(OnC2Pressed);
-        C3.onClick.AddListener(OnC3Pressed);
-        C4.onClick.AddListener(OnC4Pressed);
     }
 
     // Update is called once per frame
@@ -43,10 +34,12 @@ public class talk : MonoBehaviour
     {
         if (inRange && Input.GetKeyDown(KeyCode.Space))
         {
-            DarwinIntro.gameObject.SetActive(true);
+            PsyduckIntro.gameObject.SetActive(true);
+            SetTextPrinterVisible(PsyduckIntro);
+            Quest.gameObject.SetActive(true);
+            SetTextPrinterVisible(Quest);
             C1.gameObject.SetActive(true);
             C2.gameObject.SetActive(true);
-            C3.gameObject.SetActive(true);
         }
         // Connect to playerstats and if has 3 catapillers or fakes
         // C4.gameObject.SetActive(true);
@@ -55,6 +48,7 @@ public class talk : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("enter");
         if (collision.gameObject.CompareTag("Player"))
         {
             inRange = true;
@@ -63,17 +57,20 @@ public class talk : MonoBehaviour
     
     void OnCollisionExit2D(Collision2D collision)
     {
+        Debug.Log("exit");
         if (collision.gameObject.CompareTag("Player"))
         {
             inRange = false;
         }
+        HideAllTextPrinters();
+        C1.gameObject.SetActive(false);
+        C2.gameObject.SetActive(false);
     }
 
     void OnC1Pressed()
     {
         HideAllTextPrinters();
-        Quest.gameObject.SetActive(true);
-        SetTextPrinterVisible(Quest);
+       //Start pokemon battle
     }
 
     void OnC2Pressed()
@@ -81,20 +78,6 @@ public class talk : MonoBehaviour
         HideAllTextPrinters();
         GoAway.gameObject.SetActive(true);
         SetTextPrinterVisible(GoAway);
-    }
-
-    void OnC3Pressed()
-    {
-        HideAllTextPrinters();
-        Credentials.gameObject.SetActive(true);
-        SetTextPrinterVisible(Credentials);
-    }
-
-    void OnC4Pressed()
-    {
-        HideAllTextPrinters();
-        AmnesiaInfo.gameObject.SetActive(true);
-        SetTextPrinterVisible(AmnesiaInfo);
     }
 
     void SetTextPrinterVisible(TextPrinter textPrinter)
@@ -113,7 +96,7 @@ void SetTextPrinterInvisible(TextPrinter textPrinter)
 
 void HideAllTextPrinters()
 {
-    foreach (TextPrinter textPrinter in new[] { DarwinIntro, Quest, Credentials, AmnesiaInfo, GoAway })
+    foreach (TextPrinter textPrinter in new[] { PsyduckIntro, Quest, GoAway })
     {
         SetTextPrinterInvisible(textPrinter);
     }
