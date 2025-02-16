@@ -4,15 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< HEAD
   - Background
   - Caterpiller
   - fakeCaterpillar
   - seed
   - Door
-=======
-  - duck
->>>>>>> Interactions
   layers:
   - Default
   - TransparentFX
