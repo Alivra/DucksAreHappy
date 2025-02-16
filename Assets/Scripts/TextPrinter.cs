@@ -5,7 +5,7 @@ using TMPro;
 
 public class TextPrinter : MonoBehaviour {
     // get the string and the TMT_Text
-    string textToType = "This is the line to print.";
+    public string textToType;
     TMP_Text subtitleTextMesh;
 
     void Awake() {
