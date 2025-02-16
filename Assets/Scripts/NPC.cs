@@ -14,6 +14,8 @@ public class NPC : MonoBehaviour
     public float wordSpeed;
     public bool playerIsClose;
 
+    private bool finishedConversation;
+
     void Start()
     {
         dialogueText.text = "";
@@ -26,6 +28,12 @@ public class NPC : MonoBehaviour
             if (dialoguePanel.activeInHierarchy)
             {
                 zeroText();
+            }
+            else if (finishedConversation)
+            {
+                index = dialogue.Length - 1;
+                dialoguePanel.SetActive(true);
+                StartCoroutine(Typing());
             } else
             {
                 dialoguePanel.SetActive(true);
@@ -59,7 +67,7 @@ public class NPC : MonoBehaviour
     {
         contButton.SetActive(false);
 
-        if(index < dialogue.Length - 1)
+        if(index < dialogue.Length - 3)
         {
             index++;
             dialogueText.text = "";
@@ -67,6 +75,7 @@ public class NPC : MonoBehaviour
         } else
         {
             zeroText();
+            finishedConversation = true;
         }
     }
 
