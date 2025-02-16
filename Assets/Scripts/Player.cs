@@ -102,15 +102,15 @@ public class Player : MonoBehaviour
         close.gameObject.SetActive(false);
         
         double score = luck * morality;
-        if score <30
+        if (score <30)  
         {
             //shredded (inclusive)
         }
-        else if score > 30 && score < 50
+        else if (score > 30 && score < 50)
         {
             //walk away
         }
-        else if score > 50
+        else if (score > 50)
         {
             //eat poacher
         }
@@ -122,7 +122,7 @@ public class Player : MonoBehaviour
         close.gameObject.SetActive(false);
 
         double score = luck * morality;
-        if score <30
+        if (score <30)
         {
             //shredded (exclusive)
         }
