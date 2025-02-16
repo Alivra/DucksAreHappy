@@ -70,8 +70,10 @@ public class Psyduck : MonoBehaviour
     void OnC1Pressed()
     {
         HideAllTextPrinters();
-       //Start pokemon battle
-    }
+        C1.gameObject.SetActive(false);
+        C2.gameObject.SetActive(false);
+        Pokemon connection = gameObject.GetComponent<Pokemon>();
+        connection.PlayPokemon = true;    }
 
     void OnC2Pressed()
     {
