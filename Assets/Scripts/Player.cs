@@ -105,14 +105,17 @@ public class Player : MonoBehaviour
         if (score <30)  
         {
             //shredded (inclusive)
+            gameObject.GetComponent<SceneChanger>().LoadScene("shredI");
         }
-        else if (score > 30 && score < 50)
+        else if (score >= 30 && score < 50)
         {
             //walk away
+            gameObject.GetComponent<SceneChanger>().LoadScene("Leave");
         }
-        else if (score > 50)
+        else if (score >= 50)
         {
             //eat poacher
+            gameObject.GetComponent<SceneChanger>().LoadScene("Eat");
         }
     }
 
@@ -125,9 +128,11 @@ public class Player : MonoBehaviour
         if (score <30)
         {
             //shredded (exclusive)
+            gameObject.GetComponent<SceneChanger>().LoadScene("shredE");
         }
         else {
             //walk away
+            gameObject.GetComponent<SceneChanger>().LoadScene("Leave");
         }
     }
 
