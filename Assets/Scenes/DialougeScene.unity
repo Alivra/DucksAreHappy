@@ -1195,9 +1195,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DarwinDarNPC, Assembly-CSharp
-        m_MethodName: goToChoice1
+      - m_Target: {fileID: 1912410304}
+        m_TargetAssemblyTypeName: SirQuacksNPC, Assembly-CSharp
+        m_MethodName: goToWrongAnswer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1328,9 +1328,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DarwinDarNPC, Assembly-CSharp
-        m_MethodName: goToChoice1
+      - m_Target: {fileID: 1912410304}
+        m_TargetAssemblyTypeName: SirQuacksNPC, Assembly-CSharp
+        m_MethodName: goToWrongAnswer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1669,9 +1669,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DarwinDarNPC, Assembly-CSharp
-        m_MethodName: goToChoice1
+      - m_Target: {fileID: 1912410304}
+        m_TargetAssemblyTypeName: SirQuacksNPC, Assembly-CSharp
+        m_MethodName: goToRightAnswer1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2204,9 +2204,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DarwinDarNPC, Assembly-CSharp
-        m_MethodName: goToChoice1
+      - m_Target: {fileID: 1912410304}
+        m_TargetAssemblyTypeName: SirQuacksNPC, Assembly-CSharp
+        m_MethodName: goToWrongAnswer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2429,9 +2429,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DarwinDarNPC, Assembly-CSharp
-        m_MethodName: goToChoice1
+      - m_Target: {fileID: 1912410304}
+        m_TargetAssemblyTypeName: SirQuacksNPC, Assembly-CSharp
+        m_MethodName: goToWrongAnswer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3047,9 +3047,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DarwinDarNPC, Assembly-CSharp
-        m_MethodName: goToChoice1
+      - m_Target: {fileID: 1912410304}
+        m_TargetAssemblyTypeName: SirQuacksNPC, Assembly-CSharp
+        m_MethodName: goToRightAnswer3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3314,9 +3314,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DarwinDarNPC, Assembly-CSharp
-        m_MethodName: goToChoice1
+      - m_Target: {fileID: 1912410304}
+        m_TargetAssemblyTypeName: SirQuacksNPC, Assembly-CSharp
+        m_MethodName: goToWrongAnswer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3581,9 +3581,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DarwinDarNPC, Assembly-CSharp
-        m_MethodName: goToChoice1
+      - m_Target: {fileID: 1912410304}
+        m_TargetAssemblyTypeName: SirQuacksNPC, Assembly-CSharp
+        m_MethodName: goToRightAnswer2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4383,9 +4383,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DarwinDarNPC, Assembly-CSharp
-        m_MethodName: goToChoice1
+      - m_Target: {fileID: 1912410304}
+        m_TargetAssemblyTypeName: SirQuacksNPC, Assembly-CSharp
+        m_MethodName: goToWrongAnswer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

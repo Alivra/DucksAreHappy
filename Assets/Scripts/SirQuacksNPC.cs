@@ -16,6 +16,7 @@ public class SirQuacksNPC : MonoBehaviour
 
     private bool finishedConversation = false;
     private bool disgraced = false;
+    private bool gotChallenged = false;
 
     public GameObject choice1;
     public GameObject choice2;
@@ -48,13 +49,13 @@ public class SirQuacksNPC : MonoBehaviour
             }
             else if (disgraced)
             {
-                index = 19;
+                index = 21;
                 dialoguePanel.SetActive(true);
                 StartCoroutine(Typing());
             }
             else if (finishedConversation)
             {
-                index = 21;
+                index = 25;
                 dialoguePanel.SetActive(true);
                 StartCoroutine(Typing());
             }
@@ -72,10 +73,16 @@ public class SirQuacksNPC : MonoBehaviour
                 choice1.SetActive(true);
                 choice2.SetActive(true);
             }
-            else if (index == 19)
+            else if (index == 6 || index == 9 || index == 21)
             {
                 choice3.SetActive(true);
                 choice4.SetActive(true);
+            }
+            else if (gotChallenged)
+            {
+                index = 10;
+                dialoguePanel.SetActive(true);
+                StartCoroutine(Typing());
             }
             else
             {
@@ -109,14 +116,14 @@ public class SirQuacksNPC : MonoBehaviour
         contButton.SetActive(false);
 
         answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
+        answer2.SetActive(false);
+        answer3.SetActive(false);
+        answer4.SetActive(false);
+        answer5.SetActive(false);
+        answer6.SetActive(false);
+        answer7.SetActive(false);
+        answer8.SetActive(false);
+        answer9.SetActive(false);
 
         if (FindNextEmptyIndex(dialogue) == -1)
         {
@@ -167,14 +174,14 @@ public class SirQuacksNPC : MonoBehaviour
         contButton.SetActive(false);
 
         answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
+        answer2.SetActive(false);
+        answer3.SetActive(false);
+        answer4.SetActive(false);
+        answer5.SetActive(false);
+        answer6.SetActive(false);
+        answer7.SetActive(false);
+        answer8.SetActive(false);
+        answer9.SetActive(false);
 
         index = 2;
 
@@ -186,8 +193,8 @@ public class SirQuacksNPC : MonoBehaviour
         }
         else
         {
-            choice3.SetActive(true);
-            choice4.SetActive(true);
+            zeroText();
+            gotChallenged = true;
         }
 
     }
@@ -201,14 +208,14 @@ public class SirQuacksNPC : MonoBehaviour
         contButton.SetActive(false);
 
         answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
+        answer2.SetActive(false);
+        answer3.SetActive(false);
+        answer4.SetActive(false);
+        answer5.SetActive(false);
+        answer6.SetActive(false);
+        answer7.SetActive(false);
+        answer8.SetActive(false);
+        answer9.SetActive(false);
 
         index = 7;
 
@@ -217,12 +224,11 @@ public class SirQuacksNPC : MonoBehaviour
             index++;
             dialogueText.text = "";
             StartCoroutine(Typing());
-
         }
         else
         {
-            choice3.SetActive(true);
-            choice4.SetActive(true);
+            zeroText();
+            gotChallenged = true;
         }
     }
 
@@ -235,28 +241,28 @@ public class SirQuacksNPC : MonoBehaviour
         contButton.SetActive(false);
 
         answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
+        answer2.SetActive(false);
+        answer3.SetActive(false);
+        answer4.SetActive(false);
+        answer5.SetActive(false);
+        answer6.SetActive(false);
+        answer7.SetActive(false);
+        answer8.SetActive(false);
+        answer9.SetActive(false);
 
-        index = 20;
+        index = 22;
 
-        if (index < 20)
+        if (index < 23)
         {
             index++;
             dialogueText.text = "";
             StartCoroutine(Typing());
+            disgraced = true;
 
         }
         else
         {
             zeroText();
-            disgraced = true;
         }
 
     }
@@ -270,28 +276,31 @@ public class SirQuacksNPC : MonoBehaviour
         contButton.SetActive(false);
 
         answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
+        answer2.SetActive(false);
+        answer3.SetActive(false);
+        answer4.SetActive(false);
+        answer5.SetActive(false);
+        answer6.SetActive(false);
+        answer7.SetActive(false);
+        answer8.SetActive(false);
+        answer9.SetActive(false);
 
-        index = 12;
+        index = 10;
 
-        if (index < 12)
+        if (index < 11)
         {
             index++;
             dialogueText.text = "";
             StartCoroutine(Typing());
-        }
-        else
-        {
             answer1.SetActive(true);
             answer2.SetActive(true);
             answer3.SetActive(true);
+        }
+        else
+        {
+            //answer1.SetActive(true);
+            //answer2.SetActive(true);
+            //answer3.SetActive(true);
 
         }
     }
@@ -304,30 +313,33 @@ public class SirQuacksNPC : MonoBehaviour
         choice4.SetActive(false);
 
         answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
+        answer2.SetActive(false);
+        answer3.SetActive(false);
+        answer4.SetActive(false);
+        answer5.SetActive(false);
+        answer6.SetActive(false);
+        answer7.SetActive(false);
+        answer8.SetActive(false);
+        answer9.SetActive(false);
 
         contButton.SetActive(false);
 
-        index = 14;
+        index = 12;
 
-        if (index < 14)
+        if (index < 13)
         {
             index++;
             dialogueText.text = "";
             StartCoroutine(Typing());
-        }
-        else
-        {
             answer4.SetActive(true);
             answer5.SetActive(true);
             answer6.SetActive(true);
+        }
+        else
+        {
+            //answer4.SetActive(true);
+            //answer5.SetActive(true);
+            //answer6.SetActive(true);
 
         }
     }
@@ -340,30 +352,33 @@ public class SirQuacksNPC : MonoBehaviour
         choice4.SetActive(false);
 
         answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
+        answer2.SetActive(false);
+        answer3.SetActive(false);
+        answer4.SetActive(false);
+        answer5.SetActive(false);
+        answer6.SetActive(false);
+        answer7.SetActive(false);
+        answer8.SetActive(false);
+        answer9.SetActive(false);
 
         contButton.SetActive(false);
 
-        index = 16;
+        index = 14;
 
-        if (index < 16)
+        if (index < 15)
         {
             index++;
             dialogueText.text = "";
             StartCoroutine(Typing());
-        }
-        else
-        {
             answer7.SetActive(true);
             answer8.SetActive(true);
             answer9.SetActive(true);
+        }
+        else
+        {
+            //answer7.SetActive(true);
+            //answer8.SetActive(true);
+            //answer9.SetActive(true);
 
         }
     }
@@ -376,30 +391,31 @@ public class SirQuacksNPC : MonoBehaviour
         choice4.SetActive(false);
 
         answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
+        answer2.SetActive(false);
+        answer3.SetActive(false);
+        answer4.SetActive(false);
+        answer5.SetActive(false);
+        answer6.SetActive(false);
+        answer7.SetActive(false);
+        answer8.SetActive(false);
+        answer9.SetActive(false);
 
         contButton.SetActive(false);
 
-        index = 18;
+        index = 16;
 
-        if (index < 18)
+        if (index < 17)
         {
             index++;
             dialogueText.text = "";
             StartCoroutine(Typing());
+            disgraced = false;
+            finishedConversation = true;
+
         }
         else
         {
             zeroText();
-            disgraced = false;
-            finishedConversation = true;
         }
     }
 
@@ -411,29 +427,30 @@ public class SirQuacksNPC : MonoBehaviour
         choice4.SetActive(false);
 
         answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
-        answer1.SetActive(false);
+        answer2.SetActive(false);
+        answer3.SetActive(false);
+        answer4.SetActive(false);
+        answer5.SetActive(false);
+        answer6.SetActive(false);
+        answer7.SetActive(false);
+        answer8.SetActive(false);
+        answer9.SetActive(false);
 
         contButton.SetActive(false);
 
-        index = 20;
+        index = 18;
 
-        if (index < 20)
+        if (index < 19)
         {
             index++;
             dialogueText.text = "";
             StartCoroutine(Typing());
+            disgraced = true;
+
         }
         else
         {
             zeroText();
-            disgraced = true;
         }
     }
 
