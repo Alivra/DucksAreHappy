@@ -37,6 +37,11 @@ public class SirQuacksNPC : MonoBehaviour
     void Start()
     {
         dialogueText.text = "";
+
+        if (finishedConversation)
+        {
+            StartCoroutine(MoveUpwards());
+        }
     }
 
     private void Update()
@@ -88,6 +93,19 @@ public class SirQuacksNPC : MonoBehaviour
             {
                 contButton.SetActive(true);
             }
+        }
+    }
+    public float moveSpeed = 2f; // Speed of movement
+    public float duration = 3f;  // Time in seconds to move up
+
+    private IEnumerator MoveUpwards()
+    {
+        float elapsedTime = 0f;
+        while (elapsedTime < duration)
+        {
+            transform.position += Vector3.up * moveSpeed * Time.deltaTime;
+            elapsedTime += Time.deltaTime;
+            yield return null;
         }
     }
 

@@ -9,6 +9,8 @@ TagManager:
   - fakeCaterpillar
   - seed
   - Door
+  - duck
+  - Sir
   layers:
   - Default
   - TransparentFX

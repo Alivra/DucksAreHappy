@@ -1071,7 +1071,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 07279b8f252d84a2b9ad62c79a275770, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1511,13 +1511,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sir Quacks-A-Lot
       objectReference: {fileID: 0}
+    - target: {fileID: 645642491413075196, guid: 6e0c8e940fbb14d84a004910e2b0c74c, type: 3}
+      propertyPath: m_TagString
+      value: Sir
+      objectReference: {fileID: 0}
     - target: {fileID: 6270631078182617126, guid: 6e0c8e940fbb14d84a004910e2b0c74c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.64
+      value: 110.7
       objectReference: {fileID: 0}
     - target: {fileID: 6270631078182617126, guid: 6e0c8e940fbb14d84a004910e2b0c74c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.16
+      value: -35
       objectReference: {fileID: 0}
     - target: {fileID: 6270631078182617126, guid: 6e0c8e940fbb14d84a004910e2b0c74c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8736,6 +8740,14 @@ PrefabInstance:
     - target: {fileID: 8062524290136155786, guid: 801e3667198cb4c13afc2bc400cbab7e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: goToWrongAnswer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8419742585728465464, guid: 801e3667198cb4c13afc2bc400cbab7e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 696124603}
+    - target: {fileID: 8419742585728465464, guid: 801e3667198cb4c13afc2bc400cbab7e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextLine
       objectReference: {fileID: 0}
     - target: {fileID: 8890168252107614804, guid: 801e3667198cb4c13afc2bc400cbab7e, type: 3}
       propertyPath: m_Name
