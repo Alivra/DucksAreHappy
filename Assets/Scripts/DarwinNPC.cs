@@ -14,6 +14,7 @@ public class DarwinDarNPC : MonoBehaviour
     public float wordSpeed;
     public bool playerIsClose;
 
+    public bool canProgress = false;
     private bool finishedConversation = false;
     private bool startedQuest = false;
 
@@ -29,6 +30,34 @@ public class DarwinDarNPC : MonoBehaviour
 
     private void Update()
     {
+
+        Player check = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+
+        if ((check.CaterpillersCollected == 3) || (check.fakeCaterpillersCollected == 1))
+        {
+            canProgress = true;
+        }
+
+        if (startedQuest)
+        {
+            Debug.Log("Quest Started");
+            check.DarwinQuestStarted = true;
+        }
+
+        if (finishedConversation)
+        {
+            Debug.Log("Quest Finished");
+            check.DarwinQuestFinished = true;
+            if (check.CaterpillersCollected == 3)
+            {
+                check.morality += 5;
+            }
+            else if (check.fakeCaterpillersCollected == 1)
+            {
+                check.morality -= 5;
+            }
+        }
+
         if (Input.GetKeyDown(KeyCode.Space) && playerIsClose)
         {
             if (dialoguePanel.activeInHierarchy)
@@ -69,7 +98,13 @@ public class DarwinDarNPC : MonoBehaviour
             }
             else if (index == 15)
             {
-                choice4.SetActive(true);
+                if (canProgress)
+                {
+                    choice4.SetActive(true);
+                }
+                else{
+                    zeroText();
+                }
             }
             else
             {
@@ -104,7 +139,7 @@ public class DarwinDarNPC : MonoBehaviour
 
         if (FindNextEmptyIndex(dialogue) == -1)
         {
-            if (index < dialogue.Length - 1)
+            if (index < 18 - 1)
             {
                 index++;
                 dialogueText.text = "";
@@ -154,7 +189,7 @@ public class DarwinDarNPC : MonoBehaviour
 
         index = 3;
 
-        if (index < dialogue.Length - 14)
+        if (index < 18 - 14)
         {
             index++;
             dialogueText.text = "";
@@ -178,7 +213,7 @@ public class DarwinDarNPC : MonoBehaviour
 
         index = 4;
 
-        if (index < dialogue.Length - 14)
+        if (index < 18 - 14)
         {
             index++;
             dialogueText.text = "";
@@ -201,7 +236,7 @@ public class DarwinDarNPC : MonoBehaviour
 
         index = 7;
 
-        if (index < dialogue.Length - 7)
+        if (index < 18 - 7)
         {
             index++;
             dialogueText.text = "";
@@ -227,7 +262,7 @@ public class DarwinDarNPC : MonoBehaviour
 
         index = 11;
 
-        if (index < dialogue.Length - 3)
+        if (index < 18 - 3)
         {
             index++;
             dialogueText.text = "";

@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
     public bool hasSeed = false;
 
     public bool DarwinQuestStarted = false;
+    public bool DarwinQuestFinished = false;
+
 
     public bool JamesPondQuestStarted = false;
     public double luck;
@@ -30,6 +32,8 @@ public class Player : MonoBehaviour
         morality = 50;
         open.gameObject.SetActive(false);
         close.gameObject.SetActive(false);
+        HUD.gameObject.SetActive(false);
+
         open.onClick.AddListener(OnOpen);
         close.onClick.AddListener(OnClose);
     }
@@ -39,24 +43,11 @@ public class Player : MonoBehaviour
     {
         if (DarwinQuestStarted)
         {
-            HUD.text = "Caterpillers Collected: " + CaterpillersCollected + "/3" + "\nFake Caterpillers Collected: " + fakeCaterpillersCollected + "/1";
+            HUD.gameObject.SetActive(true);
         }
-        else
+        else if (DarwinQuestFinished)
         {
-            HUD.text = "";
-        }
-        if (JamesPondQuestStarted)
-        {
-            int number = 0;
-            if (hasSeed)
-            {
-                number = 1;
-            }
-            HUD.text = "Find Golden Seed for James Pond: " + number + "/1";
-        }
-        else
-        {
-            HUD.text = "";
+            HUD.gameObject.SetActive(false);
         }
 
     }
@@ -100,9 +91,9 @@ public class Player : MonoBehaviour
     {
         open.gameObject.SetActive(false);
         close.gameObject.SetActive(false);
-        
+
         double score = luck * morality;
-        if (score <25)  
+        if (score < 25)
         {
             //shredded (inclusive)
             gameObject.GetComponent<SceneChanger>().LoadScene("shredI");
@@ -123,16 +114,17 @@ public class Player : MonoBehaviour
     {
         open.gameObject.SetActive(false);
         close.gameObject.SetActive(false);
-        
+
         Debug.Log("Open");
-        
+
         double score = luck * morality;
-        if (score <25)
+        if (score < 25)
         {
             //shredded (exclusive)
             gameObject.GetComponent<SceneChanger>().LoadScene("shredE");
         }
-        else {
+        else
+        {
             Debug.Log("Entered if else");
             //walk away
             gameObject.GetComponent<SceneChanger>().LoadScene("Leave");
